@@ -9,12 +9,15 @@ core = 7.54
 ;
 ; Themes.
 ;
+projects[adaptivetheme][type] = theme
 projects[adaptivetheme][subdir] = "contrib"
 projects[adaptivetheme][version] = 3.4
 
+projects[mix_and_match][type] = theme
 projects[mix_and_match][subdir] = contrib
 projects[mix_and_match][version] = 2.1
 
+projects[sky][type] = theme
 projects[sky][subdir] = contrib
 projects[sky][version] = 3.1
 
@@ -39,8 +42,8 @@ projects[panels][version] = 3.9
 ; projects[riddler][subdir] = contrib
 ; projects[riddler][version] = 1.2
 
-; projects[rules][subdir] = contrib
-; projects[rules][version] = 2.9
+projects[rules][subdir] = contrib
+projects[rules][version] = 2.9
 
 ; projects[subprofiles][subdir] = contrib
 ; projects[subprofiles][version] = 1.2
@@ -234,8 +237,8 @@ projects[simplenews][version] = 1.1
 projects[strongarm][subdir] = contrib
 projects[strongarm][version] = 2.0
 
-; projects[token][subdir] = contrib
-; projects[token][version] = 1.7
+projects[token][subdir] = contrib
+projects[token][version] = 1.7
 
 projects[transliteration][subdir] = contrib
 projects[transliteration][version] = 3.2
