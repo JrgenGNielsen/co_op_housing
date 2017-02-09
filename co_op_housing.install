@@ -87,7 +87,7 @@ function co_op_housing_install() {
   $query->execute();
 
   // Enable default permissions for system roles.
-  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content'));
+  // user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content'));
   // user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access comments', 'post comments', 'skip comment approval'));
 
   // Create a default role for site administrators, with all available permissions assigned.
