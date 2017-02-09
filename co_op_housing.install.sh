@@ -7,7 +7,7 @@ DB_USER="jgn"
 DB_PWD="jgn"
 DB_DBNAME="co_op_housing"
 EMAIL="jgn@dbc.dk"
-DISTRO_MAKE="/home/jgn/co_op_housing/co_op_housing/distro.make"
+DISTRO_MAKE="/home/jgn/co_op_housing/distro.make"
 
 echo "\n# Installer Drupal core, Ding2 profil, og moduler:"
 drush make --nocolor --working-copy --contrib-destination=profiles/$PROFILE/ $DISTRO_MAKE $INSTALL_DIR
@@ -47,12 +47,12 @@ drush -y dl --nocolor diff admin_menu
 echo "\n# Enable stuff"
 drush -y en --nocolor devel simpletest coder coder_review
 drush -y en --nocolor rules_admin views_ui diff field_ui simpletest admin_menu
-; drush -y en --nocolor bibdk_webservice_settings_develop
+# drush -y en --nocolor bibdk_webservice_settings_develop
 
 echo "\n# Disable stuff"
-; drush -y dis --nocolor securepages advagg overlay
-; drush -y dis --nocolor varnish expire ding_varnish
-; drush -y dis --nocolor ding_webtrends
+# drush -y dis --nocolor securepages advagg overlay
+# drush -y dis --nocolor varnish expire ding_varnish
+# drush -y dis --nocolor ding_webtrends
 
 echo "\n# Set variables"
 drush vset --nocolor preprocess_css 0
@@ -60,8 +60,8 @@ drush vset --nocolor preprocess_js 0
 drush vset --nocolor environment development
 drush vset --nocolor devel_rebuild_theme_registry 1
 
-echo "\n# Setup translation"
-drush --nocolor bibdk-setup-translation
+# echo "\n# Setup translation"
+# drush --nocolor bibdk-setup-translation
 
 echo "\n# Revert, Clear, Rinse, Repeat"
 drush --nocolor features-revert-all -y

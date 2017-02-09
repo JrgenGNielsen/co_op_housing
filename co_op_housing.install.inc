@@ -12,8 +12,8 @@ function co_op_housing_install_tasks($install_state) {
   $tasks = array();
 
   // Add Subprofiles tasks.
-  require_once(drupal_get_path('module', 'subprofiles') . '/subprofiles.install.inc');
-  $tasks = $tasks + _subprofiles_install_tasks($install_state);
+  // require_once(drupal_get_path('module', 'subprofiles') . '/subprofiles.install.inc');
+  // $tasks = $tasks + _subprofiles_install_tasks($install_state);
 
   // // Set up the site registration task.
   // $tasks['co_op_housing_register_form'] = array(
