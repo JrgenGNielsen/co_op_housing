@@ -32,7 +32,7 @@ dependencies[] = "pathauto"
 dependencies[] = "search"
 dependencies[] = "shortcut"
 dependencies[] = "strongarm"
-dependencies[] = "; subprofiles"
+; dependencies[] = "subprofiles"
 dependencies[] = "taxonomy"
 dependencies[] = "views_ui"
 
