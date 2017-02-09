@@ -17,7 +17,7 @@
 function co_op_housing_install() {
   $t = get_t();
   // Enable some standard blocks.
-  $admin_theme = 'seven';
+  $admin_theme = 'adaptivetheme_admin';
   $values = array(
     array(
       'module' => 'node',
@@ -87,7 +87,7 @@ function co_op_housing_install() {
   $query->execute();
 
   // Enable default permissions for system roles.
-  // user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access comments'));
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content'));
   // user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access comments', 'post comments', 'skip comment approval'));
 
   // Create a default role for site administrators, with all available permissions assigned.
@@ -118,7 +118,7 @@ function co_op_housing_install() {
   menu_rebuild();
 
   // Enable the admin theme, fusion engine, and the default theme.
-  $themes = array($admin_theme, 'fusion_core');
+  $themes = array($admin_theme, 'mix_and_match');
   db_update('system')
     ->fields(array('status' => 1))
     ->condition('type', 'theme')
